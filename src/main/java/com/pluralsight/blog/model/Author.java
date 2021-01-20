@@ -21,8 +21,13 @@ public class Author {
     private String username;
     private String password;
 
+    @OneToMany
+    private List<Post> posts;
+
     public Author() {
         super();
+        Author posts = new ArrayList;
+
     }
 
     public Author(String username, String firstname, String lastname, String password) {
