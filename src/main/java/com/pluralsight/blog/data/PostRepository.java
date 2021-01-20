@@ -10,6 +10,9 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @RestResource(rel="contains-title", path="containsTitle")
     public List<Post> findByTitleContaining(String title);
 
+    //@RestResource(rel="contains-title", path="fba")
+    public List<Post> findByAuthor_Lastname(String lastname);
+
 
 
 }
